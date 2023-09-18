@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CREANOMIC 2023</title>
+    <link href="dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="#home" class="w-auto">
+              <img src="../public/img/logo.svg" />
+            </a>
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="#home"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#event"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Event</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#competition"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Competition</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="fest.html"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Fest</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="talkshow.html"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Talkshow</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <section id="home" class="pt-16 mt-0 items-center -mb-96">
+      <div class="container">
+        <div class="flex flex-wrap">
+          <div class="w-full self-center px-4 lg:w-1/2 pl-20">
+            <h1 class="font-bold text-purple text-7xl font-dsd max-w-lg">
+              CREANOMIC 2023
+            </h1>
+            <p class="text-2xl font-normal text-black mt-1 mb-8 font-manrope">
+              Future Buisness and Technology.
+            </p>
+            <span class="absolute left-80 -top-10 -z-10">
+              <img src="public/img/cloud.svg" alt="cloud" />
+            </span>
+
+            <span class="absolute left-44 top-28 -z-10">
+              <img src="public/img/cloud.svg" alt="cloud" />
+            </span>
+            <a
+              href="#"
+              class="text-base font-semibold font-manrope text-white bg-pink py-3 px-10 rounded-2xl hover:shadow-lg hover:bg-purple transition duration-300 ease-in-out t"
+              >Lets Start</a
+            >
+          </div>
+
+          <!-- icon robot -->
+          <div class="w-full self-end px-4 lg:w-1/2">
+            <div class="relative mt-10">
+              <img
+                src="public/img/robot.svg"
+                alt="robot"
+                class="max-w-mdd mx-auto"
+              />
+              <span class="absolute -right-10 -top-28 -z-10 -translate-x-1/2">
+                <img src="public/img/cloud.svg" alt="cloud" />
+              </span>
+
+              <span class="absolute left-52 top-0 -z-10">
+                <img src="public/img/cloud.svg" alt="cloud" />
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- hero end -->
+
+    <!-- script -->
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
