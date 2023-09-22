@@ -3,10 +3,242 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>UMKM</title>
     <link href="dist/output.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>UMKM</h1>
+    <!-- navbar -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="index.html" class="w-auto">
+              <img src="../public/img/logo.svg" />
+            </a>
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="index.html"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#event"
+                    id="dropdownButton"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Event
+                  </a>
+                </li>
+                <li class="group">
+                  <a
+                    href="#competition"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Competition</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="fest.html"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Fest</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="talkshow.html"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Talkshow</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+
+    <section class="pt-16 mt-0 items-center w-full relative">
+      <div
+        class="bg-local bg-no-repeat bg-cover bg-center justify-center w-full"
+        style="
+          background-image: url(./public/img/bg\ umkm.svg);
+          background-size: cover;
+        "
+      >
+        <div class="container">
+          <h1 class="text-5xl mt-2 pt-16 text-white font-dsd text-center">
+            UMKM
+          </h1>
+          <div
+            class="flex flex-col lg:flex-row justify-center items-center pt-16"
+          >
+            <div class="w-full lg:w-1/2 mt-16">
+              <img src="public/img/img umkm.svg" class="mx-auto" />
+            </div>
+
+            <!-- Paragraf -->
+            <div class="w-full lg:w-1/2 text-left mx-8">
+              <p class="text-white font-manrope text-left normal-case">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                Distinctio, iusto? Numquam reiciendis consequuntur, veniam rerum
+                tempora, voluptates voluptatum, commodi accusamus minima non
+                dolorem Lorem ipsum dolor, sit amet consectetur adipisicing
+                elit. Culpa dolorem praesentium quod natus aut quam saepe ut
+                similique animi, blanditiis, adipisci, minus nisi eveniet
+                doloremque alias sint aliquam perferendis quasi a nulla. Totam
+                at ad possimus perspiciatis unde. Nulla nemo consectetur fuga
+                reprehenderit id, at expedita quae atque magnam? Voluptates
+                porro architecto eaque vel dolorum earum ullam, iusto id quo
+                provident consequuntur! Animi, sunt sint. Necessitatibus vel
+                asperiores modi, tempore unde laborum perspiciatis pariatur
+                sequi eveniet, temporibus, sunt expedita praesentium commodi
+                aliquam? Deleniti optio odio aperiam excepturi exercitationem
+                nihil debitis dolorem doloremque harum adipisci, natus
+                voluptates, quod impedit assumenda perspiciatis!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- card -->
+        <section class="mt-32 py-8 my-8">
+          <div class="container">
+            <div
+              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4"
+            >
+              <div class="flex">
+                <!-- Kartu Pertama -->
+                <div class="rounded-xl shadow-lg mx-2">
+                  <div class="p-5">
+                    <div class="rounded-xl">
+                      <img
+                        src="./public/img/img umkm.svg"
+                        width="50%"
+                        class="mx-auto"
+                      />
+                    </div>
+                    <h5 class="text-center md:text-lg font-dsd mt-3">
+                      Nama UMKM
+                    </h5>
+                    <p class="text-slate-500 text-lg mt-3 text-center">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Dolore laborum itaque architecto exercitationem,
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Kartu Kedua -->
+                <div class="rounded-xl shadow-lg mx-2">
+                  <div class="p-5">
+                    <div class="rounded-xl overflow-hidden">
+                      <img
+                        src="./public/img/img umkm.svg"
+                        width="50%"
+                        class="mx-auto"
+                      />
+                    </div>
+                    <h5 class="text-center md:text-lg font-dsd mt-3">
+                      Nama UMKM
+                    </h5>
+                    <p class="text-slate-500 text-lg mt-3 text-center mx-auto">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Dolore laborum itaque architecto exercitationem,
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Kartu Ketiga -->
+                <div class="rounded-xl shadow-lg mx-2">
+                  <div class="p-5">
+                    <div class="rounded-xl overflow-hidden">
+                      <img
+                        src="./public/img/img umkm.svg"
+                        width="50%"
+                        class="mx-auto"
+                      />
+                    </div>
+                    <h5 class="text-center md:text-lg font-dsd mt-3">
+                      Nama UMKM
+                    </h5>
+                    <p class="text-slate-500 text-lg mt-3 text-center">
+                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                      Dolore laborum itaque architecto exercitationem,
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- card end -->
+      </div>
+    </section>
+    <!-- hero end -->
+
+    <!-- footer -->
+    <footer class="bg-white absolute w-full mt-8 py-4">
+      <div class="container mx-auto">
+        <div class="flex items-center justify-center">
+          <div class="px-4">
+            <p class="text-left font-manrope">
+              Copyright © Creanomic 2023. All rights reserved
+            </p>
+          </div>
+          <div id="footer" class="py-5 bg-white w-full lg:py-0">
+            <ul class="flex lg:justify-end lg:mx-5 lg:mr-8">
+              <li class="group mx-5">
+                <a href="https://x.com/creanomic?s=20">
+                  <img src="public/img/twitter.svg" alt="Twitter" />
+                </a>
+              </li>
+              <li class="mx-5">
+                <a href="https://www.instagram.com/creanomic_vokasiub/">
+                  <img src="public/img/instagram.svg" alt="Instagram" />
+                </a>
+              </li>
+              <li class="mx-5">
+                <a href="https://www.tiktok.com/@creanomic_vokasiub">
+                  <img src="public/img/tiktok.svg" alt="TikTok" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- script -->
+    <script src="dist/js/script.js"></script>
   </body>
 </html>
