@@ -10,3 +10,169 @@
     <h1>UMKM</h1>
   </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Talkshow</title>
+    <link href="dist/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <header
+      class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10"
+    >
+      <div class="container">
+        <div class="flex items-center justify-between relative">
+          <div class="px-4">
+            <a href="index.html" class="w-auto">
+              <img src="../public/img/logo.svg" />
+            </a>
+          </div>
+          <div class="flex items-center px-4">
+            <button
+              id="hamburger"
+              name="hamburger"
+              type="button"
+              class="block absolute right-4 lg:hidden"
+            >
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+              <span
+                class="hamburger-line transition duration-300 ease-in-out"
+              ></span>
+            </button>
+
+            <nav
+              id="nav-menu"
+              class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+            >
+              <ul class="block lg:flex">
+                <li class="group">
+                  <a
+                    href="index.html"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Home</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="#event"
+                    id="dropdownButton"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Event
+                  </a>
+                </li>
+                <li class="group">
+                  <a
+                    href="#competition"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Competition</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="fest.html"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Fest</a
+                  >
+                </li>
+                <li class="group">
+                  <a
+                    href="talkshow.html"
+                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                    >Talkshow</a
+                  >
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- navbar end -->
+
+    <!-- hero section start -->
+    <section class="pt-16 mt-0 items-center w-full relative">
+      <div
+        class="bg-local bg-no-repeat bg-cover bg-center justify-center w-full"
+        style="
+          background-image: url(./public/img/bg\ talkshow.svg);
+          background-size: cover;
+        "
+      >
+        <div class="container">
+          <div class="flex-wrap justify-center">
+            <div class="w-full self-center px-4">
+              <h1
+                class="flex items-center justify-center font-dsd text-5xl mt-2 pt-16 text-white"
+              >
+                TALKSHOW
+              </h1>
+
+              <p class="font-manrope font-normal text-white mt-10 text-center">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Similique esse provident aperiam eligendi nihil deserunt est
+                autem dolor quisquam nulla deleniti, ea, quo hic dolore error
+                expedita sint at earum ex assumenda consequatur nisi
+                repellendus. Quo quidem nostrum vitae enim et labore omnis, a
+                consequatur sed ipsa, nulla fuga cupiditate distinctio illo
+                beatae. Similique quam quisquam perferendis id dolorem neque
+              </p>
+
+              <div class="img pt-5 mt-10 text-center">
+                <img
+                  src="./public/img/talkshow guest.svg"
+                  alt=""
+                  class="mx-auto pt-16"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- hero end -->
+
+    <!-- footer -->
+    <footer class="bg-white absolute w-full mt-8 py-4">
+      <div class="container">
+        <div class="flex items-center justify-center">
+          <div class="px-4">
+            <p class="text-left font-manrope">
+              Copyright © Creanomic 2023. All rights reserved
+            </p>
+          </div>
+          <div id="footer" class="py-5 bg-white w-full lg:py-0">
+            <ul class="flex lg:justify-end mr-8">
+              <li class="group mx-5">
+                <a href="https://x.com/creanomic?s=20">
+                  <img src="public/img/twitter.svg" alt="Twitter" />
+                </a>
+              </li>
+              <li class="mx-5">
+                <a href="https://www.instagram.com/creanomic_vokasiub/">
+                  <img src="public/img/instagram.svg" alt="Instagram" />
+                </a>
+              </li>
+              <li class="mx-5">
+                <a href="https://www.tiktok.com/@creanomic_vokasiub">
+                  <img src="public/img/tiktok.svg" alt="TikTok" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- footer end -->
+
+    <!-- script -->
+    <script src="dist/js/script.js"></script>
+  </body>
+</html>
