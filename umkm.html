@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>UMKM</title>
     <link href="dist/output.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
     <!-- navbar -->
@@ -86,7 +87,6 @@
     <!-- navbar end -->
 
     <!-- hero section start -->
-
     <section class="pt-16 mt-0 items-center w-full relative">
       <div
         class="bg-local bg-no-repeat bg-cover bg-center justify-center w-full"
@@ -129,78 +129,38 @@
             </div>
           </div>
         </div>
+        <div
+          class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden"
+        >
+          <div
+            class="max-w-md mx-auto bg-white rounded-xl shadow-md overflow-hidden"
+          >
+            <!-- Gambar card -->
+            <img
+              class="h-48 w-full"
+              src="./public/img/img umkm.svg"
+              alt="Gambar Card"
+            />
 
-        <!-- card -->
-        <section class="mt-32 py-8 my-8">
-          <div class="container">
-            <div
-              class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4"
-            >
-              <div class="flex">
-                <!-- Kartu Pertama -->
-                <div class="rounded-xl shadow-lg mx-2">
-                  <div class="p-5">
-                    <div class="rounded-xl">
-                      <img
-                        src="./public/img/img umkm.svg"
-                        width="50%"
-                        class="mx-auto"
-                      />
-                    </div>
-                    <h5 class="text-center md:text-lg font-dsd mt-3">
-                      Nama UMKM
-                    </h5>
-                    <p class="text-slate-500 text-lg mt-3 text-center">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore laborum itaque architecto exercitationem,
-                    </p>
-                  </div>
-                </div>
+            <!-- Konten card -->
+            <div class="px-6 py-4">
+              <div class="font-bold text-xl mb-2">Judul Card</div>
+              <p class="text-gray-700 text-base">
+                Deskripsi singkat tentang card ini. Anda dapat menambahkan teks
+                dan konten lainnya di sini.
+              </p>
+            </div>
 
-                <!-- Kartu Kedua -->
-                <div class="rounded-xl shadow-lg mx-2">
-                  <div class="p-5">
-                    <div class="rounded-xl overflow-hidden">
-                      <img
-                        src="./public/img/img umkm.svg"
-                        width="50%"
-                        class="mx-auto"
-                      />
-                    </div>
-                    <h5 class="text-center md:text-lg font-dsd mt-3">
-                      Nama UMKM
-                    </h5>
-                    <p class="text-slate-500 text-lg mt-3 text-center mx-auto">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore laborum itaque architecto exercitationem,
-                    </p>
-                  </div>
-                </div>
-
-                <!-- Kartu Ketiga -->
-                <div class="rounded-xl shadow-lg mx-2">
-                  <div class="p-5">
-                    <div class="rounded-xl overflow-hidden">
-                      <img
-                        src="./public/img/img umkm.svg"
-                        width="50%"
-                        class="mx-auto"
-                      />
-                    </div>
-                    <h5 class="text-center md:text-lg font-dsd mt-3">
-                      Nama UMKM
-                    </h5>
-                    <p class="text-slate-500 text-lg mt-3 text-center">
-                      Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                      Dolore laborum itaque architecto exercitationem,
-                    </p>
-                  </div>
-                </div>
-              </div>
+            <!-- Tombol card (opsional) -->
+            <div class="px-6 pt-4 pb-2">
+              <button
+                class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
+              >
+                Tombol
+              </button>
             </div>
           </div>
-        </section>
-        <!-- card end -->
+        </div>
       </div>
     </section>
     <!-- hero end -->
