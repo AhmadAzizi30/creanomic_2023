@@ -52,7 +52,6 @@
                   <a
                     href="#event"
                     id="dropdownButton"
-                    onclick="toggleDropdown()"
                     class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
                     >Event
                   </a>
@@ -87,32 +86,78 @@
     <!-- navbar end -->
 
     <!-- hero section start -->
-    <section class="pt-16 mt-0 items-center w-full relative right-0">
-      <div class="container">
-        <div class="flex flex-wrap">
-          <div class="w-full self-center px-4">
-            <h1 class="text-center font-dsd text-5xl max-w-lg mt-2">
-              TALKSHOW
-            </h1>
-            <p
-              class="text-center items-center font-manrope font-normal mt-10 p-20"
-            >
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-              Similique esse provident aperiam eligendi nihil deserunt est autem
-              dolor quisquam nulla deleniti, ea, quo hic dolore error expedita
-              sint at earum ex assumenda consequatur nisi repellendus. Quo
-              quidem nostrum vitae enim et labore omnis, a consequatur sed ipsa,
-              nulla fuga cupiditate distinctio illo beatae. Similique quam
-              quisquam perferendis id dolorem neque
-            </p>
+    <section class="pt-16 mt-0 items-center w-full relative">
+      <div
+        class="bg-local bg-no-repeat bg-cover bg-center justify-center w-full"
+        style="
+          background-image: url(./public/img/bg\ talkshow.svg);
+          background-size: cover;
+        "
+      >
+        <div class="container">
+          <div class="flex-wrap justify-center">
+            <div class="w-full self-center px-4">
+              <h1
+                class="flex items-center justify-center font-dsd text-5xl mt-2 pt-16 text-white"
+              >
+                TALKSHOW
+              </h1>
+
+              <p class="font-manrope font-normal text-white mt-10 text-center">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Similique esse provident aperiam eligendi nihil deserunt est
+                autem dolor quisquam nulla deleniti, ea, quo hic dolore error
+                expedita sint at earum ex assumenda consequatur nisi
+                repellendus. Quo quidem nostrum vitae enim et labore omnis, a
+                consequatur sed ipsa, nulla fuga cupiditate distinctio illo
+                beatae. Similique quam quisquam perferendis id dolorem neque
+              </p>
+
+              <div class="img pt-5 mt-10 text-center">
+                <img
+                  src="./public/img/talkshow guest.svg"
+                  alt=""
+                  class="mx-auto pt-16"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </section>
     <!-- hero end -->
 
-    <!-- footer start -->
-
+    <!-- footer -->
+    <footer class="bg-white absolute w-full mt-8 py-4">
+      <div class="container">
+        <div class="flex items-center justify-center">
+          <div class="px-4">
+            <p class="text-left font-manrope">
+              Copyright © Creanomic 2023. All rights reserved
+            </p>
+          </div>
+          <div id="footer" class="py-5 bg-white w-full lg:py-0">
+            <ul class="flex lg:justify-end mr-8">
+              <li class="group mx-5">
+                <a href="https://x.com/creanomic?s=20">
+                  <img src="public/img/twitter.svg" alt="Twitter" />
+                </a>
+              </li>
+              <li class="mx-5">
+                <a href="https://www.instagram.com/creanomic_vokasiub/">
+                  <img src="public/img/instagram.svg" alt="Instagram" />
+                </a>
+              </li>
+              <li class="mx-5">
+                <a href="https://www.tiktok.com/@creanomic_vokasiub">
+                  <img src="public/img/tiktok.svg" alt="TikTok" />
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
     <!-- footer end -->
 
     <!-- script -->
