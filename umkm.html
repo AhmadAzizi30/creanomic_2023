@@ -6,6 +6,10 @@
     <title>UMKM</title>
     <link href="dist/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
   </head>
   <body>
     <!-- navbar -->
@@ -16,7 +20,7 @@
         <div class="flex items-center justify-between relative">
           <div class="px-4">
             <a href="index.html" class="w-auto">
-              <img src="../public/img/logo.svg" />
+              <img src="public/img/logo.svg" />
             </a>
           </div>
           <div class="flex items-center px-4">
@@ -50,12 +54,60 @@
                   >
                 </li>
                 <li class="group">
-                  <a
-                    href="#event"
-                    id="dropdownButton"
-                    class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
-                    >Event
-                  </a>
+                  <div
+                    @click.away="open = false"
+                    class="relative"
+                    x-data="{ open: false }"
+                  >
+                    <button
+                      @click="open = !open"
+                      class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    >
+                      <span>Event</span>
+                      <svg
+                        fill="currentColor"
+                        viewBox="0 0 20 20"
+                        :class="{'rotate-180': open, 'rotate-0': !open}"
+                        class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                          clip-rule="evenodd"
+                        ></path>
+                      </svg>
+                    </button>
+                    <div
+                      x-show="open"
+                      x-transition:enter="transition ease-out duration-100"
+                      x-transition:enter-start="transform opacity-0 scale-95"
+                      x-transition:enter-end="transform opacity-100 scale-100"
+                      x-transition:leave="transition ease-in duration-75"
+                      x-transition:leave-start="transform opacity-100 scale-100"
+                      x-transition:leave-end="transform opacity-0 scale-95"
+                      class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
+                    >
+                      <div
+                        class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800"
+                      >
+                        <a
+                          class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                          href="#"
+                          >Workshop</a
+                        >
+                        <a
+                          class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                          href="#"
+                          >Link #2</a
+                        >
+                        <a
+                          class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                          href="#"
+                          >Link #3</a
+                        >
+                      </div>
+                    </div>
+                  </div>
                 </li>
                 <li class="group">
                   <a
@@ -91,18 +143,20 @@
       <div
         class="bg-local bg-no-repeat bg-cover bg-center justify-center w-full"
         style="
-          background-image: url(./public/img/bg\ umkm.svg);
+          background-image: url(public/img/bg\ umkm.svg);
           background-size: cover;
         "
       >
         <div class="container">
-          <h1 class="text-5xl mt-2 pt-16 text-white font-dsd text-center">
+          <h1
+            class="text-5xl mt-8 pt-14 lg:pt-16 xl:pt-28 text-white font-dsd text-center"
+          >
             UMKM
           </h1>
           <div
-            class="flex flex-col lg:flex-row justify-center items-center pt-16"
+            class="flex flex-col lg:flex-row justify-center items-center pt-0 lg:pt-3 xl:pt-3"
           >
-            <div class="w-full lg:w-1/2 mt-16">
+            <div class="w-full lg:w-1/2 mt-16 pt-0 lg:pt-2 xl:pt-2">
               <img src="public/img/img umkm.svg" class="mx-auto" />
             </div>
 
@@ -129,178 +183,194 @@
             </div>
           </div>
         </div>
-
-        <section id="Blog" class="pt-32">
+        <!-- card -->
+        <section id="Blog" class="pt-12 lg:pt-20 xl:pt-20">
           <div class="container">
-              <div class="w-full px-4">
-                  <div class="max-w-xl  text-start mb-16  ml-24">
+            <div class="flex flex-wrap">
+              <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="center-center"
+                  data-aos-duration="3000"
+                  class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+                >
+                  <img
+                    src="public/img/img umkm.jpg"
+                    alt="Blog"
+                    class="w-full"
+                  />
+                  <div class="py-8 px-6">
+                    <h3>
+                      <a
+                        href="#"
+                        class="block mb-3 font-semibold text-xl text-slate-950 hover:text-purple-600 truncate text-center"
+                        >Nama UMKM</a
+                      >
+                    </h3>
+                    <p
+                      class="font-medium text-base text-slate-400 mb-6 text-center"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
                   </div>
+                </div>
               </div>
-              <div class="flex flex-wrap">
-                  <div class="w-full px-4 lg:w-1/3 xl:w-1/3 ">
-                      <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                          <img src="public/img/img umkm.svg" alt="Blog" class="w-full">
-                          <div class="py-8 px-6">
-                              <h3>
-                                  <a href="#" class="block mb-3 font-semibold text-xl 
-                                  text-slate-950 hover:text-purple-600 truncate">Nama UMKM</a>
-                              </h3>
-                              <p class="font-medium text-base text-slate-400 mb-6">
-                                  Lorem ipsum dolor sit amet consectetur 
-                                  adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                              </p>
-                              <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                              py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                          </div>
-                      </div>
+              <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="center-center"
+                  data-aos-duration="3000"
+                  class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+                >
+                  <img
+                    src="public/img/img umkm.jpg"
+                    alt="Blog"
+                    class="w-full"
+                  />
+                  <div class="py-8 px-6">
+                    <h3>
+                      <a
+                        href="#"
+                        class="block mb-3 font-semibold text-xl text-slate-950 hover:text-purple-600 truncate text-center"
+                        >Nama UMKM</a
+                      >
+                    </h3>
+                    <p
+                      class="font-medium text-base text-slate-400 mb-6 text-center"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
                   </div>
-                  <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
-                      <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                          <img src="public/img/img umkm.svg" alt="Blog" class="w-full">
-                          <div class="py-8 px-6">
-                              <h3>
-                                  <a href="#" class="block mb-3 font-semibold text-xl 
-                                  text-slate-950 hover:text-purple-600 truncate">Nama UMKM</a>
-                              </h3>
-                              <p class="font-medium text-base text-slate-400 mb-6">
-                                  Lorem ipsum dolor sit amet consectetur 
-                                  adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                              </p>
-                              <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                              py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                          </div>
-                      </div>
-                  </div>
-                  <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="w-full px-4 lg:w-1/3 xl:w-1/3">
-                      <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                          <img src="https://source.unsplash.com/360x200?Bussiness" alt="Blog" class="w-full">
-                          <div class="py-8 px-6">
-                              <h3>
-                                  <a href="#" class="block mb-3 font-semibold text-xl 
-                                  text-slate-950 hover:text-purple-600 truncate">Cara Menata Bisinis yang Tepat</a>
-                              </h3>
-                              <p class="font-medium text-base text-slate-400 mb-6">
-                                  Lorem ipsum dolor sit amet consectetur 
-                                  adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                              </p>
-                              <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                              py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                          </div>
-                      </div>
-                  </div>
+                </div>
               </div>
-              <div class="flex flex-wrap">
-                <div class="w-full px-4 lg:w-1/3 xl:w-1/3 ">
-                    <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="public/img/img umkm.svg" alt="Blog" class="w-full">
-                        <div class="py-8 px-6">
-                            <h3>
-                                <a href="#" class="block mb-3 font-semibold text-xl 
-                                text-slate-950 hover:text-purple-600 truncate">Nama UMKM</a>
-                            </h3>
-                            <p class="font-medium text-base text-slate-400 mb-6">
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                            </p>
-                            <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                            py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
-                    <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="public/img/img umkm.svg" alt="Blog" class="w-full">
-                        <div class="py-8 px-6">
-                            <h3>
-                                <a href="#" class="block mb-3 font-semibold text-xl 
-                                text-slate-950 hover:text-purple-600 truncate">Cara Menjadi Fotografer yang baik</a>
-                            </h3>
-                            <p class="font-medium text-base text-slate-400 mb-6">
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                            </p>
-                            <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                            py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-                <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="w-full px-4 lg:w-1/3 xl:w-1/3">
-                    <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                        <img src="https://source.unsplash.com/360x200?Bussiness" alt="Blog" class="w-full">
-                        <div class="py-8 px-6">
-                            <h3>
-                                <a href="#" class="block mb-3 font-semibold text-xl 
-                                text-slate-950 hover:text-purple-600 truncate">Cara Menata Bisinis yang Tepat</a>
-                            </h3>
-                            <p class="font-medium text-base text-slate-400 mb-6">
-                                Lorem ipsum dolor sit amet consectetur 
-                                adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                            </p>
-                            <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                            py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="w-full px-4">
-                  <div class="max-w-xl  text-start mb-16 ml-16">
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-center"
+                data-aos-duration="3000"
+                class="w-full px-4 lg:w-1/3 xl:w-1/3"
+              >
+                <div
+                  class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+                >
+                  <img
+                    src="public/img/img umkm.jpg"
+                    alt="Blog"
+                    class="w-full"
+                  />
+                  <div class="py-8 px-6">
+                    <h3>
+                      <a
+                        href="#"
+                        class="block mb-3 font-semibold text-xl text-slate-950 hover:text-purple-600 truncate text-center"
+                        >Nama UMKM</a
+                      >
+                    </h3>
+                    <p
+                      class="font-medium text-base text-slate-400 mb-6 text-center"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
                   </div>
-                  <div class="flex flex-wrap">
-                    <div class="w-full px-4 lg:w-1/3 xl:w-1/3 ">
-                        <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                            <img src="https://source.unsplash.com/360x200?programming" alt="Blog" class="w-full">
-                            <div class="py-8 px-6">
-                                <h3>
-                                    <a href="#" class="block mb-3 font-semibold text-xl 
-                                    text-slate-950 hover:text-purple-600 truncate">Tips Belajar Programming</a>
-                                </h3>
-                                <p class="font-medium text-base text-slate-400 mb-6">
-                                    Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                                </p>
-                                <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                                py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
-                        <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                            <img src="https://source.unsplash.com/360x200?Photography" alt="Blog" class="w-full">
-                            <div class="py-8 px-6">
-                                <h3>
-                                    <a href="#" class="block mb-3 font-semibold text-xl 
-                                    text-slate-950 hover:text-purple-600 truncate">Cara Menjadi Fotografer yang baik</a>
-                                </h3>
-                                <p class="font-medium text-base text-slate-400 mb-6">
-                                    Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                                </p>
-                                <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                                py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="w-full px-4 lg:w-1/3 xl:w-1/3">
-                        <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
-                            <img src="https://source.unsplash.com/360x200?Bussiness" alt="Blog" class="w-full">
-                            <div class="py-8 px-6">
-                                <h3>
-                                    <a href="#" class="block mb-3 font-semibold text-xl 
-                                    text-slate-950 hover:text-purple-600 truncate">Cara Menata Bisinis yang Tepat</a>
-                                </h3>
-                                <p class="font-medium text-base text-slate-400 mb-6">
-                                    Lorem ipsum dolor sit amet consectetur 
-                                    adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
-                                </p>
-                                <a href="#" class="font-medium text-sm text-white bg-indigo-600 
-                                py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
-                            </div>
-                        </div>
-                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex flex-wrap">
+              <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="center-center"
+                  data-aos-duration="3000"
+                  class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+                >
+                  <img
+                    src="public/img/img umkm.jpg"
+                    alt="Blog"
+                    class="w-full"
+                  />
+                  <div class="py-8 px-6">
+                    <h3>
+                      <a
+                        href="#"
+                        class="block mb-3 font-semibold text-xl text-slate-950 hover:text-purple-600 truncate text-center"
+                        >Nama UMKM</a
+                      >
+                    </h3>
+                    <p
+                      class="font-medium text-base text-slate-400 mb-6 text-center"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+                <div
+                  data-aos="fade-up"
+                  data-aos-anchor-placement="center-center"
+                  data-aos-duration="3000"
+                  class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+                >
+                  <img
+                    src="public/img/img umkm.jpg"
+                    alt="Blog"
+                    class="w-full"
+                  />
+                  <div class="py-8 px-6">
+                    <h3>
+                      <a
+                        href="#"
+                        class="block mb-3 font-semibold text-xl text-slate-950 hover:text-purple-600 truncate text-center"
+                        >Nama UMKM</a
+                      >
+                    </h3>
+                    <p
+                      class="font-medium text-base text-slate-400 mb-6 text-center"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div
+                data-aos="fade-up"
+                data-aos-anchor-placement="center-center"
+                data-aos-duration="3000"
+                class="w-full px-4 lg:w-1/3 xl:w-1/3"
+              >
+                <div
+                  class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+                >
+                  <img
+                    src="public/img/img umkm.jpg"
+                    alt="Blog"
+                    class="w-full"
+                  />
+                  <div class="py-8 px-6">
+                    <h3>
+                      <a
+                        href="#"
+                        class="block mb-3 font-semibold text-xl text-slate-950 hover:text-purple-600 truncate text-center"
+                        >Nama UMKM</a
+                      >
+                    </h3>
+                    <p
+                      class="font-medium text-base text-slate-400 mb-6 text-center"
+                    >
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                      Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </section>
-
+        <!-- card -->
       </div>
     </section>
     <!-- hero end -->
@@ -315,7 +385,7 @@
             </p>
           </div>
           <div id="footer" class="py-5 bg-white w-full lg:py-0">
-            <ul class="flex lg:justify-end lg:mx-5 lg:mr-8">
+            <ul class="flex lg:justify-end">
               <li class="group mx-5">
                 <a href="https://x.com/creanomic?s=20">
                   <img src="public/img/twitter.svg" alt="Twitter" />
