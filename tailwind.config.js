@@ -7,6 +7,9 @@ module.exports = {
       padding: "0px",
     },
     extend: {
+      backgroundImage:{
+        'Home_bg':"url('/public/img/Home.png')",
+      },
       colors: {
         purple: "#6C3077",
         pink: "#A73284",
@@ -19,6 +22,7 @@ module.exports = {
       screens: {
         "2xl": "1350px",
       },
+
     },
   },
   plugins: [],
