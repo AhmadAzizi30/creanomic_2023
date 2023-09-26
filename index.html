@@ -9,34 +9,67 @@
   <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 <body>
-    <!-- navbar -->
-    <header class="bg-white fixed top-0 left-0 w-full flex items-center z-10">
-      <div class="container">
-        <div class="flex items-center justify-between relative">
-          <div class="px-4">
-            <a href="#home" class="w-auto">
-              <img src="public/img/logo.svg" alt="" />
-            </a>
-          </div>
-          <div class="flex items-center px-4">
-            <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
-              <span class="hamburger-line transition duration-300 ease-in-out"></span>
-              <span class="hamburger-line transition duration-300 ease-in-out"></span>
-              <span class="hamburger-line transition duration-300 ease-in-out"></span>
-            </button>
-            <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
-              <ul class="block lg:flex">
-                <li class="group">
-                  <a href="#home" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Home</a>
-                </li>
-                <div @click.away="open = false" class="relative" x-data="{ open: false }">
+  <!-- navbar -->
+  <header class="bg-white fixed top-0 left-0 w-full flex items-center z-10">
+    <div class="container">
+      <div class="flex items-center justify-between relative">
+        <div class="px-4">
+          <a href="index.html" class="w-auto">
+            <img src="public/img/logo.svg" />
+          </a>
+        </div>
+        <div class="flex items-center px-4">
+          <button
+            id="hamburger"
+            name="hamburger"
+            type="button"
+            class="block absolute right-4 lg:hidden"
+          >
+            <span
+              class="hamburger-line transition duration-300 ease-in-out"
+            ></span>
+            <span
+              class="hamburger-line transition duration-300 ease-in-out"
+            ></span>
+            <span
+              class="hamburger-line transition duration-300 ease-in-out"
+            ></span>
+          </button>
+
+          <nav
+            id="nav-menu"
+            class="hidden absolute py-5 bg-white shadow-lg rounded-lg w-full right-0 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none"
+          >
+            <ul class="block lg:flex">
+              <li class="group">
+                <a
+                  href="index.html"
+                  class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                  >Home</a
+                >
+              </li>
+              <li class="group">
+                <div
+                  @click.away="open = false"
+                  class="relative"
+                  x-data="{ open: false }"
+                >
                   <button
                     @click="open = !open"
-                    class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold font-manrope text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                    class="flex flex-row items-center w-full px-4 py-2 mt-2 text-sm font-semibold text-left bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:focus:bg-gray-600 dark-mode:hover:bg-gray-600 md:w-auto md:inline md:mt-0 md:ml-4 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
                   >
-                    <span>Event</span>
-                    <svg fill="currentColor" viewBox="0 0 20 20" :class="{'rotate-180': open, 'rotate-0': !open}" class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1">
-                      <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path>
+                    <span class="text-base font-manrope mx-4">Event</span>
+                    <svg
+                      fill="currentColor"
+                      viewBox="0 0 20 20"
+                      :class="{'rotate-180': open, 'rotate-0': !open}"
+                      class="inline w-4 h-4 mt-1 ml-1 transition-transform duration-200 transform md:-mt-1"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                        clip-rule="evenodd"
+                      ></path>
                     </svg>
                   </button>
                   <div
@@ -47,232 +80,269 @@
                     x-transition:leave="transition ease-in duration-75"
                     x-transition:leave-start="transform opacity-100 scale-100"
                     x-transition:leave-end="transform opacity-0 scale-95"
-                    class="absolute right-0 w-full mt-2 origin-top-right rounded-md shadow-lg md:w-48"
+                    class="absolute px-2 py-2 rounded-md dark-mode:bg-gray-800 max-w-sm -ml-6"
                   >
-                    <div class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800">
+                    <div
+                      class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800 max-w-sm ml-36"
+                    >
                       <a
-                        class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="#"
-                        >Link #1</a
+                        class="font-manrope block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 focus:text-gray-900 hover:bg-gray-200 hover:text-purple focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="workshop.html"
+                        >Workshop</a
                       >
                       <a
-                        class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="#"
-                        >Link #2</a
+                        class="font-manrope block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="exhibition.html"
+                        >Exhibition</a
                       >
                       <a
-                        class="block px-4 py-2 mt-2 text-sm font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
-                        href="#"
-                        >Link #3</a
+                        class="font-manrope block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="index.html #competition"
+                        >Competition</a
+                      >
+                      <a
+                        class="font-manrope block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 hover:text-gray-900 focus:text-gray-900 hover:bg-gray-200 focus:bg-gray-200 focus:outline-none focus:shadow-outline"
+                        href="umkm.html"
+                        >UMKM</a
                       >
                     </div>
                   </div>
                 </div>
-                <li class="group">
-                  <a href="#competition" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Competition</a>
-                </li>
-                <li class="group">
-                  <a href="fest.html" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Fest</a>
-                </li>
-                <li class="group">
-                  <a href="talkshow.html" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Talkshow</a>
-                </li>
-              </ul>
-            </nav>
-          </div>
+              </li>
+              <li class="group">
+                <a
+                  href="merchandise.html"
+                  class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                  >Merchandise</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  href="fest.html"
+                  class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                  >Fest</a
+                >
+              </li>
+              <li class="group">
+                <a
+                  href="talkshow.html"
+                  class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple"
+                  >Talkshow</a
+                >
+              </li>
+            </ul>
+          </nav>
         </div>
       </div>
-    </header>
-    <!-- navbar end -->
-    <!-- hero section start -->
-    <section id="home" class="pt-16 mt-0 items-center w-full -mb-96">
-      <div class="container">
-        <div class="flex flex-wrap mt-0">
-          <div class="w-full self-center px-4 lg:w-1/2 pl-0">
-            <h1 class="font-bold text-purple text-7xl font-dsd max-w-lg">CREANOMIC 2023</h1>
-            <p class="text-2xl font-normal text-black mt-1 mb-8 font-manrope">Future Buisness and Technology</p>
-            <span class="absolute left-80 -top-10 -z-10">
-              <img src="public/img/cloud.svg" alt="cloud" />
-            </span>
-
-            <span class="absolute left-44 top-28 -z-10">
-              <img src="public/img/cloud.svg" alt="cloud" />
-            </span>
-            <a href="#" class="text-base font-semibold font-manrope text-white bg-pink py-3 px-10 rounded-2xl hover:shadow-lg hover:bg-purple transition duration-300 ease-in-out">Lets Start</a>
-          </div>
-          <!-- icon robot -->
-          <div class="w-full self-end px-4 lg:w-1/2">
-            <div class="relative mt-10">
-              <img src="public/img/robot.svg" alt="robot" class="max-w-mdd mx-auto" />
-              <span class="absolute -right-10 -top-28 -z-10 -translate-x-1/2">
-                <img src="public/img/cloud.svg" alt="cloud" />
-              </span>
-
-              <span class="absolute left-52 top-0 -z-10">
-                <img src="public/img/cloud.svg" alt="cloud" />
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      
     </div>
-  </section>
-   <!-- about us -->
-   <section id="about us" class="pt-36">
+  </header>
+  <!-- navbar end -->
+
+  <!-- hero section start -->
+  <section id="home" class="pt-24 mt-0 items-center w-full -mb-96">
+   
     <div class="container">
-      <div class="flex flex-col lg:flex-row justify-center items-center pt-0 lg:pt-3 xl:pt-3">
-        <div class="w-full px-4 lg:w-1/3 xl:w-1/3 pt-96">
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-center"
-            data-aos-duration="3000"
-            class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
-          >
-            <video src=""
-            clas="w-full"></video>
-          </div>
+      <div class="flex flex-wrap mt-0">
+        <div class="w-full self-center px-4 lg:w-1/2 pl-0">
+          <h1 class="font-bold text-purple text-7xl font-dsd max-w-lg pt-24">CREANOMIC 
+            <br>2023</h1>
+          <p class="text-2xl font-normal text-black mt-1 mb-8 font-manrope pt-7">Future Buisness and Technology</p>
+          <span class="absolute left-80 -top-20 -z-10">
+            <img src="public/img/cloud.svg" alt="cloud" />
+          </span>
+
+          <span class="absolute left-44 top-28 -z-10">
+            <img src="public/img/cloud.svg" alt="cloud" />
+          </span>
+          <a href="#" class="text-base font-semibold font-manrope text-white bg-pink py-3 px-10 rounded-2xl hover:shadow-lg hover:bg-purple transition duration-300 ease-in-out">Lets Start</a>
         </div>
-        <div class="w-96 h-80 self-end px-4 bg-blue-500 ml-10 ">
-         
-              <h1 class=" text-black text-center font-semibold font-serif text-2xl mb-4"> About us</h1>
-              <p class="text-left text-base tracking-tighter">Creative Economy and Innovation Centre, also known as Creanomic is annual event which holds by Vocational Education Program, Brawijaya University. The event itself brings up topic about Creativity and Innovation which maintains the standard Economy and Technology Business Exploration skills.
-                <br>
-                
-                Finally after the pandemic phase last year, Creanomic is back with bringing the new concept. Creanomic also brings up new events: Competition International level Scope, Art Exhibition, Seminar and Creanomic Music Festival international level.</p>
+        <!-- icon robot -->
+        <div class="w-full self-end px-4 lg:w-1/2">
+          <div class="relative mt-10">
+            <img src="public/img/mascot creanomic 2023.png" alt="robot" class="max-w-mdd mx-auto" />
+            <span class="absolute -right-10 -top-28 -z-10 -translate-x-1/2">
+              <img src="public/img/cloud.svg" alt="cloud" />
+            </span>
+
+            <span class="absolute left-52 top-0 -z-10">
+              <img src="public/img/cloud.svg" alt="cloud" />
+            </span>
             
-         
-
+          </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- about us end -->
-  <!-- competition -->
-  <section>
-    <div class="container">
-      <h1 class="text-5xl pt-60 lg:pt-16 xl:pt-28 text-black font-dsd text-center">
-        Competition
-      </h1>
-      <div class="flex flex-wrap pt-10">
-        <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+    
+  </div>
+</section>
 
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-center"
-            data-aos-duration="3000"
-            class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
-          >
-            <img
-              src="public/img/img umkm.jpg"
-              alt="Blog"
-              class="w-full"
-            />
-            <div class="py-8 px-6">
-              <h3>
-                <a
-                  href="#"
-                  class="block mb-3 font-semibold text-xl text-purple hover:text-purple-600 truncate text-center"
-                  >Fashion Show</a
-                >
-              </h3>
-              <p
-                class="font-medium text-base text-black mb-6 text-center font-manrope"
-              >
-               Coorporate Couture : A Fashion Show for Office.
-              </p>
-              <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
-              <a href="#" class="text-base font-semibold font-manrope text-black bg-white py-2 px-7 hover:shadow-lg border-green-600 transition duration-300 ease-in-out">CP</a>
+ <!-- about us -->
+ <section id="about us" class="pt-96">
 
-            </div>
-          </div>
-        </div>
-        <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
-          <div
-            data-aos="fade-up"
-            data-aos-anchor-placement="center-center"
-            data-aos-duration="3000"
-            class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
-          >
-            <img
-              src="public/img/img umkm.jpg"
-              alt="Blog"
-              class="w-full"
-            />
-            <div class="py-8 px-6">
-              <h3>
-                <a
-                  href="#"
-                  class="block mb-3 font-semibold text-xl text-purple hover:text-purple-600 truncate text-center"
-                  >UI/UX Design</a
-                >
-              </h3>
-              <p
-                class="font-medium text-base tracking-tighter text-black mb-6 text-center font-manrope"
-              >
-                Digital Pathfinders : Transforming User Experience in Digital Marketing.
-              </p>
-              <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
-              <a href="#" class="text-base font-semibold font-manrope text-black bg-white py-2 px-7 hover:shadow-lg border-green-600 transition duration-300 ease-in-out">CP</a>
-            </div>
-          </div>
-        </div>
+  <div class="container">
+    <div class="flex flex-col lg:flex-row justify-center items-center pt-0 lg:pt-3 xl:pt-3">
+      <div class="w-full px-4 lg:w-1/3 xl:w-1/3 pt-96">
         <div
           data-aos="fade-up"
           data-aos-anchor-placement="center-center"
           data-aos-duration="3000"
-          class="w-full px-4 lg:w-1/3 xl:w-1/3"
+          class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
         >
-          <div
-            class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
-          >
-            <img
-              src="public/img/img umkm.jpg"
-              alt="Blog"
-              class="w-full"
-            />
-            <div class="py-8 px-6">
-              <h3>
-                <a
-                  href="#"
-                  class="block mb-3 font-semibold text-xl text-purple hover:text-purple-600 truncate text-center"
-                  >Buisness Class</a
-                >
-              </h3>
-              <p
-                class="font-medium text-base tracking-tighter text-black mb-6 text-center font-manrope"
+          <video src=""
+          clas="w-full"></video>
+        </div>
+      </div>
+      <div class="w-96 h-80 self-end px-4 bg-blue-500 ml-10 ">
+       
+       
+            <h1 class=" text-black text-center font-semibold font-serif text-2xl mb-4"> About us</h1>
+            <p class="text-left text-base tracking-tighter">Creative Economy and Innovation Centre, also known as Creanomic is annual event which holds by Vocational Education Program, Brawijaya University. The event itself brings up topic about Creativity and Innovation which maintains the standard Economy and Technology Business Exploration skills.
+              <br>
+              
+              Finally after the pandemic phase last year, Creanomic is back with bringing the new concept. Creanomic also brings up new events: Competition International level Scope, Art Exhibition, Seminar and Creanomic Music Festival international level.</p>
+              <span class="absolute -right-7  ">
+                <img src="public/img/13 1.svg" alt="cloud" />
+              </span>
+
+      </div>
+    </div>
+  </div>
+</section>
+<!-- about us end -->
+<!-- competition -->
+<section>
+  <div class="container">
+    
+    <h1 class="text-5xl pt-60 lg:pt-16 xl:pt-28 text-black font-dsd text-center">
+      Competition
+    </h1>
+    <div class="flex flex-wrap pt-10">
+      <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-center"
+          data-aos-duration="3000"
+          class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+        >
+          <img
+            src="public/img/img umkm.jpg"
+            alt="Blog"
+            class="w-full"
+          />
+          <div class="py-8 px-6">
+            <h3>
+              <a
+                href="#"
+                class="block mb-3 font-semibold text-xl text-purple hover:text-purple-600 truncate text-center"
+                >Fashion Show</a
               >
-                Digital Drive : Revolutionizing Marketing Strategies in the Digital Era.
-              </p>
-              <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
-              <a href="#" class="text-base font-semibold font-manrope text-black bg-white  mx-5 py-2 px-7 hover:shadow-lg  transition duration-300 ease-in-out border border-green-600">CP</a>
-            </div>
+            </h3>
+            <p
+              class="font-medium text-base text-black mb-6 text-center font-manrope"
+            >
+             Coorporate Couture : A Fashion Show for Office.
+            </p>
+            <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
+            <a href="#" class="text-base font-semibold font-manrope text-black bg-white  mx-5 py-2 px-7 hover:shadow-lg  transition duration-300 ease-in-out border border-green-600">CP</a>
+
           </div>
         </div>
       </div>
-
+      <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+        <div
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-center"
+          data-aos-duration="3000"
+          class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+        >
+          <img
+            src="public/img/img umkm.jpg"
+            alt="Blog"
+            class="w-full"
+          />
+          <div class="py-8 px-6">
+            <h3>
+              <a
+                href="#"
+                class="block mb-3 font-semibold text-xl text-purple hover:text-purple-600 truncate text-center"
+                >UI/UX Design</a
+              >
+            </h3>
+            <p
+              class="font-medium text-base tracking-tighter text-black mb-6 text-center font-manrope"
+            >
+              Digital Pathfinders : Transforming User Experience in Digital Marketing.
+            </p>
+            <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
+            <a href="#" class="text-base font-semibold font-manrope text-black bg-white  mx-5 py-2 px-7 hover:shadow-lg  transition duration-300 ease-in-out border border-green-600">CP</a>
+          </div>
+        </div>
+      </div>
+      <div class="w-full px-4 lg:w-1/3 xl:w-1/3"
+        data-aos="fade-up"
+        data-aos-anchor-placement="center-center"
+        data-aos-duration="3000"
+        
+      >
+        <div
+          class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
+        >
+          <img
+            src="public/img/img umkm.jpg"
+            alt="Blog"
+            class="w-full"
+          />
+          <div class="py-8 px-6">
+            <h3>
+              <a
+                href="#"
+                class="block mb-3 font-semibold text-xl text-purple hover:text-purple-600 truncate text-center"
+                >Buisness Class</a
+              >
+            </h3>
+            <p
+              class="font-medium text-base tracking-tighter text-black mb-6 text-center font-manrope"
+            >
+              Digital Drive : Revolutionizing Marketing Strategies in the Digital Era.
+            </p>
+            <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
+            <a href="#" class="text-base font-semibold font-manrope text-black bg-white  mx-5 py-2 px-7 hover:shadow-lg  transition duration-300 ease-in-out border border-green-600">CP</a>
+          </div>
+        </div>
+      </div>
     </div>
 
-  </section> 
-  <!-- competition end -->
-  <!-- Sponsorship -->
-  <section>
-    <div class="container">
-      <h1 class="text-5xl pt-6 lg:pt-16 xl:pt-28 text-black font-dsd text-center">
-        Sponsorship
-      </h1>
-      <div class="flex flex-wrap">
-        <div class="w-full items-center justify-center flex">
+  </div>
 
+</section> 
+<!-- competition end -->
+<!-- Sponsorship -->
+<section>
+  <div class="container">
+    <h1 class="text-5xl pt-6 lg:pt-16 xl:pt-28 text-black font-dsd text-center">
+      Sponsorship
+    </h1>
+    <div class="flex flex-wrap">
+      <div class="w-full items-center justify-center flex">
+
+        <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
+        >
+          <img
+            src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
+            alt="Blog"
+            class="h-auto max-w-full rounded-lg"
+          />
+          </div>
           <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
-          >
-            <img
-              src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
-              alt="Blog"
-              class="h-auto max-w-full rounded-lg"
-            />
-            </div>
-            <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
+        >
+          <img
+            src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
+            alt="Blog"
+            class="h-auto max-w-full rounded-lg"
+          />
+          </div>
+          <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
           >
             <img
               src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
@@ -296,41 +366,41 @@
                   class="h-auto max-w-full rounded-lg"
                 />
                 </div>
-                <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
-                >
-                  <img
-                    src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
-                    alt="Blog"
-                    class="h-auto max-w-full rounded-lg"
-                  />
                   </div>
+                  
                     </div>
-                    
-                      </div>
-        </div>
-        </div>
-        </div>
+      </div>
+      </div>
       </div>
     </div>
-  </section> 
-  <!-- Media Partner -->
-  <section>
-    <div class="container">
-      <h1 class="text-5xl pt-2 lg:pt-10 xl:pt-16 text-black font-dsd text-center">
-        Media Partner
-      </h1>
-      <div class="flex flex-wrap">
-        <div class="w-full items-center justify-center flex">
+  </div>
+</section> 
+<!-- Media Partner -->
+<section>
+  <div class="container">
+    <h1 class="text-5xl pt-2 lg:pt-10 xl:pt-16 text-black font-dsd text-center">
+      Media Partner
+    </h1>
+    <div class="flex flex-wrap">
+      <div class="w-full items-center justify-center flex">
 
+        <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
+        >
+          <img
+            src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
+            alt="Blog"
+            class="h-auto max-w-full rounded-lg"
+          />
+          </div>
           <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
-          >
-            <img
-              src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
-              alt="Blog"
-              class="h-auto max-w-full rounded-lg"
-            />
-            </div>
-            <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
+        >
+          <img
+            src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
+            alt="Blog"
+            class="h-auto max-w-full rounded-lg"
+          />
+          </div>
+          <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
           >
             <img
               src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
@@ -354,55 +424,81 @@
                   class="h-auto max-w-full rounded-lg"
                 />
                 </div>
-                <div class="bg-none w-24 h-24  overflow-hidden mb-10 mt-10 mx-5"
-                >
-                  <img
-                    src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg"
-                    alt="Blog"
-                    class="h-auto max-w-full rounded-lg"
-                  />
                   </div>
                     </div>
-                      </div>
-        </div>
-        </div>
-        </div>
+      </div>
+      </div>
       </div>
     </div>
-  </section> 
-  <!-- Media Partner end -->
-  <section>
-    <div class="container">
-      <h1 class="text-5xl pt-2 lg:pt-10 xl:pt-16 text-black font-dsd text-center my-10 ">
-        Logo Philosophy
-      </h1>
-      <div class="flex flex-wrap">
-        <div class="w-full items-center justify-center flex">
-          <div class="rounded-md bg-pink py-4 px-4 hover:shadow-lg mx-4">
-        </div>
-        <p class="flex font-dsd px-2">Keanggunan, kemewahan,<br>
-          kreativitas, dan imajinasi.</p>
-        <div class="rounded-md bg-orange-500 py-4 px-4 hover:shadow-lg mx-4"></div>
-        <p class="flex font-dsd px-2">Kasih sayang, kelembutan,<br>
-          dan kehangatan.</p>
-        <div class="rounded-md bg-purple-900 py-4 px-4 hover:shadow-lg mx-4">  
-        </div>
-        <p class="flex font-dsd px-2">Semangat, kegembiraan,<br>
-          dan positif.</p>
-        </div>
-        </div>
-        <div class="w-full items-center justify-center flex">
-          <img src="public/img/logo philosophy.svg" alt="logo philosophy" class="items-center">
-        </div>
-        <div class="w-full items-center justify-center flex">
-          <p class="font-dsd mx-4 text-center">Bulan dihubungkan dengan siklus,<br> perubahan, dan pertumbuhan.</p>
-          <p class="font-dsd mx-4 text-center">Capybara adalah hewan yang harmonis <br>dengan alam dan lingkungan sekitarnya,<br> mereka dikenal dengan sifat kelembutan, <br> kedamaian, dan kebersahajaannya.</p>
-          <p class="font-dsd mx-4 text-center">Bintang melambangkan mimpi,<br> aspirasi, dan petunjuk</p>
-        </div>
+  </div>
+</section> 
+<!-- Media Partner end -->
+<section>
+  <div class="container">
+    <h1 class="text-5xl pt-2 lg:pt-10 xl:pt-16 text-black font-dsd text-center my-10 ">
+      Logo Philosophy
+    </h1>
+    <div class="flex flex-wrap">
+      <div class="w-full items-center justify-center flex">
+        <div class="rounded-md bg-pink py-4 px-4 hover:shadow-lg mx-4">
       </div>
+      <p class="flex font-dsd px-2">Keanggunan, kemewahan,<br>
+        kreativitas, dan imajinasi.</p>
+      <div class="rounded-md bg-orange-500 py-4 px-4 hover:shadow-lg mx-4"></div>
+      <p class="flex font-dsd px-2">Kasih sayang, kelembutan,<br>
+        dan kehangatan.</p>
+      <div class="rounded-md bg-purple-900 py-4 px-4 hover:shadow-lg mx-4">  
+      </div>
+      <p class="flex font-dsd px-2">Semangat, kegembiraan,<br>
+        dan positif.</p>
+      </div>
+      </div>
+      <div class="w-full items-center justify-center flex">
+        <img src="public/img/logo philosophy.svg" alt="logo philosophy" class="items-center">
+      </div>
+      <div class="w-full items-center justify-center flex">
+        <p class="font-dsd mx-4 text-center">Bulan dihubungkan dengan siklus,<br> perubahan, dan pertumbuhan.</p>
+        <p class="font-dsd mx-4 text-center">Capybara adalah hewan yang harmonis <br>dengan alam dan lingkungan sekitarnya,<br> mereka dikenal dengan sifat kelembutan, <br> kedamaian, dan kebersahajaannya.</p>
+        <p class="font-dsd mx-4 text-center">Bintang melambangkan mimpi,<br> aspirasi, dan petunjuk</p>
+      </div>
+    </div>
+    </div>
+</section> 
+
+
+<!-- footer -->
+<footer class="bg-white bottom-0 w-full mt-8 py-4">
+  <div class="container">
+    <div class="flex items-center justify-between">
+      <div class="px-4">
+        <p class="text-left font-manrope">
+          Copyright © Creanomic 2023. All rights reserved
+        </p>
+      </div>
+      <div id="footer" class="py-5 bg-white flex lg:py-0">
+        <ul class="flex lg:justify-end">
+          <li class="group mx-5 w-14">
+            <a href="https://x.com/creanomic?s=20">
+              <img src="public/img/twitter.svg" alt="Twitter" />
+            </a>
+          </li>
+          <li class="mx-5 w-14">
+            <a href="https://www.instagram.com/creanomic_vokasiub/">
+              <img src="public/img/instagram.svg" alt="Instagram" />
+            </a>
+          </li>
+          <li class="mx-5 w-14">
+            <a href="https://www.tiktok.com/@creanomic_vokasiub">
+              <img src="public/img/tiktok.svg" alt="TikTok" />
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
   
-  </section> 
-  
-  <script src="dist/js/script.js"></script>
+</footer>
+<!-- footer end -->
+</div>
+<script src="dist/js/script.js"></script> 
 </body>
 </html>
