@@ -191,7 +191,7 @@
   <div
   class="bg-local bg-no-repeat bg-cover bg-center justify-center w-full"
   style="
-    background-image: url(public/img/BGFest.svg);
+    background-image: url(public/img/Home.png);
     background-size: cover;
   "
  >
@@ -229,107 +229,83 @@
   </div>
 
 <!-- about us end -->
-<!-- competition -->
-  <div class="container">
-    
-    <h1 class="text-5xl pt-60 lg:pt-16 xl:pt-28 text-white font-dsd text-center">
-      Competition
-    </h1>
-    <div class="flex flex-wrap pt-10">
-      <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
 
-        <div
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-center"
-          data-aos-duration="3000"
-          class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
-        >
-          <img
-            src="public/img/img umkm.jpg"
-            alt="Blog"
-            class="w-full"
-          />
-          <div class="py-8 px-6">
-            <h3>
-              <a
-                href="#"
-                class="block mb-3 font-semibold text-xl text-black hover:text-purple-600 truncate text-center"
-                >Fashion Show</a
-              >
-            </h3>
-            <p
-              class="font-medium text-base text-black mb-6 text-center font-manrope"
-            >
-             Coorporate Couture : A Fashion Show for Office.
-            </p>
-            <div class="items-center">
-            <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
-            <a href="#" class="text-base font-semibold font-manrope text-black bg-white  mx-5 py-2 px-7 hover:shadow-lg  transition duration-300 ease-in-out border border-green-600">CP</a>
-          </div>
-          </div>
-        </div>
+<!-- competition -->
+
+  <h1 class="text-5xl pt-60 lg:pt-16 xl:pt-28 text-black font-dsd text-center">
+    Competition
+  </h1>
+  <div class="flex">
+    <div class="w-2/12 flex items-center">
+      <div class="w-full text-right">
+        <button onclick="prev()" class="p-3 rounded-full bg-white border border-gray-100 shadow-lg mr-5">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75" />
+          </svg>
+          
+        </button>
       </div>
-      <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
-        <div
-          data-aos="fade-up"
-          data-aos-anchor-placement="center-center"
-          data-aos-duration="3000"
-          class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
-        >
-          <img
-            src="public/img/img umkm.jpg"
-            alt="Blog"
-            class="w-full"
-          />
-          <div class="py-8 px-6">
-            <h3>
-              <a
-                href="#"
-                class="block mb-3 font-semibold text-xl text-black hover:text-purple-600 truncate text-center"
-                >UI/UX Design</a
-              >
-            </h3>
-            <p
-              class="font-medium text-base tracking-tighter text-black mb-6 text-center font-manrope"
-            >
-              Digital Pathfinders : Transforming User Experience in Digital Marketing.
-            </p>
-            <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
-            <a href="#" class="text-base font-semibold font-manrope text-black bg-white  mx-5 py-2 px-7 hover:shadow-lg  transition duration-300 ease-in-out border border-green-600">CP</a>
+    </div>
+    <div id="sliderContainer" class="w-10/12 overflow-hidden">
+
+      <ul id="slider" class="flex w-full transition-margin duration-700">
+        <li class="w-96 p-5">
+          <div class="border rounded-lg p-5 h-full">
+            <img class="h-50 w-full object-cover rounded-md" src="public/img/img umkm.jpg" alt="">
+          <h2 class="mt-2 text-2xl font-bold text-center font-manrope">Fashion Show</h2>
+          <p class="mt-2 text-black text-center">Coorporate Couture : A Fashion Show for Office</p>
+          <button class="mt-4 px-6 py-3 rounded-md bg-green-600 text-white font-bold" >Download File</button>
+          <button class="mx-5 px-6 py-3 rounded-md bg-white text-black border border-green-500 font-bold" >CP</button>
           </div>
-        </div>
-      </div>
-      <div class="w-full px-4 lg:w-1/3 xl:w-1/3"
-        data-aos="fade-up"
-        data-aos-anchor-placement="center-center"
-        data-aos-duration="3000"
+        </li>
+        <li class="w-96 p-5">
+          <div class="border rounded-lg p-5 h-full">
+            <img class="h-50 w-full object-cover rounded-md" src="public/img/13 1.svg" alt="">
+          <h2 class="mt-2 text-2xl font-bold text-center font-manrope">Fashion Show</h2>
+          <p class="mt-2 text-black text-center">Coorporate Couture : A Fashion Show for Office</p>
+          <button class="mt-4 px-6 py-3 rounded-md bg-green-600 text-white font-bold" >Download File</button>
+          <button class="mx-5 px-6 py-3 rounded-md bg-white text-black border border-green-500 font-bold" >CP</button>
+          </div>
+        </li>
+        <li class="w-96 p-5">
+          <div class="border rounded-lg p-5 h-full">
+            <img class="h-50 w-full object-cover rounded-md" src="public/img/elementFest.svg" alt="">
+          <h2 class="mt-2 text-2xl font-bold text-center font-manrope">Business Class</h2>
+          <p class="mt-2 text-black text-center">Coorporate Couture : A Fashion Show for Office</p>
+          <button class="mt-4 px-6 py-3 rounded-md bg-green-600 text-white font-bold" >Download File</button>
+          <button class="mx-5 px-6 py-3 rounded-md bg-white text-black border border-green-500 font-bold" >CP</button>
+          </div>
+        </li>
+        <li class="w-96 p-5">
+          <div class="border rounded-lg p-5 h-full">
+            <img class="h-50 w-full object-cover rounded-md" src="public/img/birmingham-museums-trust-zNT66rWP53g-unsplash.jpg" alt="">
+          <h2 class="mt-2 text-2xl font-bold text-center font-manrope">Fashion Show</h2>
+          <p class="mt-2 text-black text-center">Coorporate Couture : A Fashion Show for Office</p>
+          <button class="mt-4 px-6 py-3 rounded-md bg-green-600 text-white font-bold" >Download File</button>
+          <button class="mx-5 px-6 py-3 rounded-md bg-white text-black border border-green-500 font-bold" >CP</button>
+          </div>
+        </li>
+        <li class="w-96 p-5">
+          <div class="border rounded-lg p-5 h-full">
+            <img class="h-50 w-full object-cover rounded-md" src="public/img/img umkm.jpg" alt="">
+          <h2 class="mt-2 text-2xl font-bold text-center font-manrope">UIUX</h2>
+          <p class="mt-2 text-black text-center">Coorporate Couture : A Fashion Show for Office</p>
+          <button class="mt-4 px-6 py-3 rounded-md bg-green-600 text-white font-bold" >Download File</button>
+          <button class="mx-5 px-6 py-3 rounded-md bg-white text-black border border-green-500 font-bold" >CP</button>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+    <div class="w-2/12 flex items-center">
+      <div class="w-full">
+      <button onclick="next()" class="p-3 rounded-full bg-white border border-gray-100 shadow-lg ml-5">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
+        </svg>
         
-      >
-        <div
-          class="bg-white rounded-xl shadow-lg overflow-hidden mb-10"
-        >
-          <img
-            src="public/img/img umkm.jpg"
-            alt="Blog"
-            class="w-full"
-          />
-          <div class="py-8 px-6">
-            <h3>
-              <a
-                href="#"
-                class="block mb-3 font-semibold text-xl text-black hover:text-purple-600 truncate text-center"
-                >Buisness Class</a
-              >
-            </h3>
-            <p
-              class="font-medium text-base tracking-tighter text-black mb-6 text-center font-manrope"
-            >
-              Digital Drive : Revolutionizing Marketing Strategies in the Digital Era.
-            </p>
-            <a href="#" class="text-base font-semibold font-manrope text-black bg-green-600 py-2 px-7 hover:shadow-lg hover:bg-green-400 transition duration-300 ease-in-out">Download File</a>
-            <a href="#" class="text-base font-semibold font-manrope text-black bg-white  mx-5 py-2 px-7 hover:shadow-lg  transition duration-300 ease-in-out border border-green-600">CP</a>
-          </div>
-        </div>
+        
+      </button>
       </div>
     </div>
 
@@ -340,7 +316,7 @@
 <!-- Sponsorship -->
 
   <div class="container">
-    <h1 class="text-5xl pt-6 lg:pt-16 xl:pt-28 text-white font-dsd text-center">
+    <h1 class="text-5xl pt-6 lg:pt-16 xl:pt-28 text-black font-dsd text-center">
       Sponsorship
     </h1>
     <div class="flex flex-wrap">
@@ -519,6 +495,6 @@
 </footer>
 <!-- footer end -->
 </div>
-<script src="dist/js/script.js"></script> 
+<script src="./main.js"></script> 
 </body>
 </html>
