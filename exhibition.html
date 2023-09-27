@@ -4,6 +4,279 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Exhibition</title>
+<<<<<<< HEAD
+    <link href="./dist/output.css" rel="stylesheet" />
+  </head>
+  <body class="bg-black">
+  <!-- Navbar Start -->
+  <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10 bg-white">
+    <div class="container">
+      <div class="flex items-center justify-between relative">
+        <div class="px-4">
+          <a href="index.html" class="w-auto">
+            <img src="../public/img/logo.svg" />
+          </a>
+        </div>
+        <div class="flex items-center px-4">
+          <button id="hamburger" name="hamburger" type="button" class="block absolute right-4 lg:hidden">
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+            <span class="hamburger-line transition duration-300 ease-in-out"></span>
+          </button>
+
+          <nav id="nav-menu" class="hidden absolute py-5 bg-white shadow-lg rounded-lg max-w[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent lg:max-w-full lg:shadow-none lg:rounded-none">
+            <ul class="block lg:flex">
+              <li class="group">
+                <a href="index.html" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Home</a>
+              </li>
+              <li class="group">
+                <a href="#event" id="dropdownButton" onclick="toggleDropdown()" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Event </a>
+              </li>
+              <li class="group">
+                <a href="#competition" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Competition</a>
+              </li>
+              <li class="group">
+                <a href="fest.html" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Fest</a>
+              </li>
+              <li class="group">
+                <a href="talkshow.html" class="font-semibold font-manrope text-base text-black py-2 mx-8 flex group-hover:text-purple">Talkshow</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- Navbar End -->
+
+
+<!-- Hero Section Start -->
+<section class="pt-56 pb-56">
+  <div class="container">
+    <div class="w-full px-4">
+      <div class="max-w-xl mx-auto text-center mb-16">
+        
+        <h1 class="font-bold text-white text-3xl mb-4">EXHIBITION</h2>
+        <p class="font-medium text-md text-white">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+          Dignissimos, vel consequuntur! Corrupti et ipsa nostrum!
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Hero Section End -->
+
+<!-- Section Blog Start -->
+<section id="Blog" class="pt-96">
+  <div class="container">
+      <div class="w-full px-4">
+          <div class="max-w-xl  text-start mb-16  ml-24">
+              <h2 class="font-bold text-white text-3xl mb-4">Teknologi Informasi</h2>
+          </div>
+      </div>
+      <div class="flex flex-wrap">
+          <div class="w-full px-4 lg:w-1/3 xl:w-1/3 ">
+              <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                  <img src="https://source.unsplash.com/360x200?programming" alt="Blog" class="w-full">
+                  <div class="py-8 px-6">
+                      <h3>
+                          <a href="#" class="block mb-3 font-semibold text-xl 
+                          text-slate-950 hover:text-purple-600 truncate">Tips Belajar Programming</a>
+                      </h3>
+                      <p class="font-medium text-base text-slate-400 mb-6">
+                          Lorem ipsum dolor sit amet consectetur 
+                          adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                      </p>
+                      <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                      py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+          <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+              <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                  <img src="https://source.unsplash.com/360x200?Photography" alt="Blog" class="w-full">
+                  <div class="py-8 px-6">
+                      <h3>
+                          <a href="#" class="block mb-3 font-semibold text-xl 
+                          text-slate-950 hover:text-purple-600 truncate">Cara Menjadi Fotografer yang baik</a>
+                      </h3>
+                      <p class="font-medium text-base text-slate-400 mb-6">
+                          Lorem ipsum dolor sit amet consectetur 
+                          adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                      </p>
+                      <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                      py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+          <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="w-full px-4 lg:w-1/3 xl:w-1/3">
+              <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                  <img src="https://source.unsplash.com/360x200?Bussiness" alt="Blog" class="w-full">
+                  <div class="py-8 px-6">
+                      <h3>
+                          <a href="#" class="block mb-3 font-semibold text-xl 
+                          text-slate-950 hover:text-purple-600 truncate">Cara Menata Bisinis yang Tepat</a>
+                      </h3>
+                      <p class="font-medium text-base text-slate-400 mb-6">
+                          Lorem ipsum dolor sit amet consectetur 
+                          adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                      </p>
+                      <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                      py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="flex flex-wrap">
+        <div class="w-full px-4 lg:w-1/3 xl:w-1/3 ">
+            <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                <img src="https://source.unsplash.com/360x200?programming" alt="Blog" class="w-full">
+                <div class="py-8 px-6">
+                    <h3>
+                        <a href="#" class="block mb-3 font-semibold text-xl 
+                        text-slate-950 hover:text-purple-600 truncate">Tips Belajar Programming</a>
+                    </h3>
+                    <p class="font-medium text-base text-slate-400 mb-6">
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                    py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+            <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                <img src="https://source.unsplash.com/360x200?Photography" alt="Blog" class="w-full">
+                <div class="py-8 px-6">
+                    <h3>
+                        <a href="#" class="block mb-3 font-semibold text-xl 
+                        text-slate-950 hover:text-purple-600 truncate">Cara Menjadi Fotografer yang baik</a>
+                    </h3>
+                    <p class="font-medium text-base text-slate-400 mb-6">
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                    py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="w-full px-4 lg:w-1/3 xl:w-1/3">
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                <img src="https://source.unsplash.com/360x200?Bussiness" alt="Blog" class="w-full">
+                <div class="py-8 px-6">
+                    <h3>
+                        <a href="#" class="block mb-3 font-semibold text-xl 
+                        text-slate-950 hover:text-purple-600 truncate">Cara Menata Bisinis yang Tepat</a>
+                    </h3>
+                    <p class="font-medium text-base text-slate-400 mb-6">
+                        Lorem ipsum dolor sit amet consectetur 
+                        adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                    </p>
+                    <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                    py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full px-4">
+          <div class="max-w-xl  text-start mb-16 ml-16">
+              <h2 class="font-bold text-white text-3xl mb-4">Design Grafis</h2>
+          </div>
+          <div class="flex flex-wrap">
+            <div class="w-full px-4 lg:w-1/3 xl:w-1/3 ">
+                <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                    <img src="https://source.unsplash.com/360x200?programming" alt="Blog" class="w-full">
+                    <div class="py-8 px-6">
+                        <h3>
+                            <a href="#" class="block mb-3 font-semibold text-xl 
+                            text-slate-950 hover:text-purple-600 truncate">Tips Belajar Programming</a>
+                        </h3>
+                        <p class="font-medium text-base text-slate-400 mb-6">
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                        </p>
+                        <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                        py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div class="w-full px-4 lg:w-1/3 xl:w-1/3">
+                <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                    <img src="https://source.unsplash.com/360x200?Photography" alt="Blog" class="w-full">
+                    <div class="py-8 px-6">
+                        <h3>
+                            <a href="#" class="block mb-3 font-semibold text-xl 
+                            text-slate-950 hover:text-purple-600 truncate">Cara Menjadi Fotografer yang baik</a>
+                        </h3>
+                        <p class="font-medium text-base text-slate-400 mb-6">
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                        </p>
+                        <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                        py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+            <div data-aos="fade-up" data-aos-anchor-placement="center-center" data-aos-duration="3000" class="w-full px-4 lg:w-1/3 xl:w-1/3">
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden mb-10">
+                    <img src="https://source.unsplash.com/360x200?Bussiness" alt="Blog" class="w-full">
+                    <div class="py-8 px-6">
+                        <h3>
+                            <a href="#" class="block mb-3 font-semibold text-xl 
+                            text-slate-950 hover:text-purple-600 truncate">Cara Menata Bisinis yang Tepat</a>
+                        </h3>
+                        <p class="font-medium text-base text-slate-400 mb-6">
+                            Lorem ipsum dolor sit amet consectetur 
+                            adipisicing elit. Enim, harum. Lorem ipsum dolor sit amet.
+                        </p>
+                        <a href="#" class="font-medium text-sm text-white bg-indigo-600 
+                        py-2 px-4 rounded-lg hover:opacity-80">Baca Selengkapnya</a>
+                    </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Blog End -->
+<!-- footer -->
+<footer class="bg-white bottom-0 w-full mt-8 py-4">
+    <div class="container">
+      <div class="flex items-center justify-between">
+        <div class="px-4">
+          <p class="text-left font-manrope">
+            Copyright © Creanomic 2023. All rights reserved
+          </p>
+        </div>
+        <div id="footer" class="py-5 bg-white flex lg:py-0">
+          <ul class="flex lg:justify-end mr-8">
+            <li class="group mx-5">
+              <a href="https://x.com/creanomic?s=20">
+                <img src="public/img/twitter.svg" alt="Twitter" />
+              </a>
+            </li>
+            <li class="mx-5">
+              <a href="https://www.instagram.com/creanomic_vokasiub/">
+                <img src="public/img/instagram.svg" alt="Instagram" />
+              </a>
+            </li>
+            <li class="mx-5">
+              <a href="https://www.tiktok.com/@creanomic_vokasiub">
+                <img src="public/img/tiktok.svg" alt="TikTok" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- footer end -->
+  <!-- script -->
+  <script src="dist/js/script.js"></script>
+=======
     <link href="dist/output.css" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script
@@ -168,5 +441,6 @@
       </div>
     </footer>
     <!-- footer end -->
+>>>>>>> c864fd071f4a617fd27d76e6cc7ac94e3aafb2bd
   </body>
 </html>
