@@ -1,3 +1,4 @@
+let firstVisibleIndex = 0;
 let sliderContainer = document.getElementById("sliderContainer");
 let slider = document.getElementById("slider");
 let cards = slider.getElementsByTagName("li");
@@ -21,11 +22,29 @@ for (let index = 0; index < cards.length; index++) {
   const element = cards[index];
   element.style.width = cardWidth + "px";
 }
+
 function prev(){
-  if(+slider.style.marginLeft.slice(0,-2)!=-cardWidth*(cards.length-elementsToShow))
+  if(+slider.style.marginLeft.slice(0,-2)!=-cardWidth*(cards.length-elementsToShow)){
   slider.style.marginLeft = ((+slider.style.marginLeft.slice(0,-2))-cardWidth)+'px';
+  firstVisibleIndex++;
+  }
 }
 function next(){
-  if(+slider.style.marginLeft.slice(0,-2)!=0)
+  if(+slider.style.marginLeft.slice(0,-2)!=0){
   slider.style.marginLeft = ((+slider.style.marginLeft.slice(0,-2))+cardWidth)+'px';
+  firstVisibleIndex--;
+  }
+}
+function prev() {
+  if (firstVisibleIndex > 0) {
+    slider.style.marginLeft = ((+slider.style.marginLeft.slice(0, -2)) + cardWidth) + 'px';
+    firstVisibleIndex--;
+  }
+}
+
+function next() {
+  if (firstVisibleIndex < cards.length - elementsToShow) {
+    slider.style.marginLeft = ((+slider.style.marginLeft.slice(0, -2)) - cardWidth) + 'px';
+    firstVisibleIndex++;
+  }
 }
