@@ -7,6 +7,10 @@ module.exports = {
       padding: "0px",
     },
     extend: {
+      backgroundImage:{
+        'exhibition_bg':"url('/public/img/Coba Background.png')",
+       
+      },
       colors: {
         purple: "#6C3077",
         pink: "#A73284",
