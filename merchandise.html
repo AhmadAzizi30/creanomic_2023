@@ -83,10 +83,10 @@
                       x-transition:leave="transition ease-in duration-75"
                       x-transition:leave-start="transform opacity-100 scale-100"
                       x-transition:leave-end="transform opacity-0 scale-95"
-                      class="absolute px-2 py-2 rounded-md dark-mode:bg-gray-800 max-w-sm -ml-6"
+                      class="absolute px-2 py-2 dark-mode:bg-gray-800 max-w-sm -ml-6"
                     >
                       <div
-                        class="px-2 py-2 bg-white rounded-md shadow dark-mode:bg-gray-800 max-w-sm ml-36"
+                        class="px-2 py-2 bg-white shadow dark-mode:bg-gray-800 max-w-sm ml-36"
                       >
                         <a
                           class="font-manrope block px-4 py-2 mt-2 text-base font-semibold bg-transparent rounded-lg dark-mode:bg-transparent dark-mode:hover:bg-gray-600 dark-mode:focus:bg-gray-600 dark-mode:focus:text-white dark-mode:hover:text-white dark-mode:text-gray-200 md:mt-0 focus:text-gray-900 hover:bg-gray-200 hover:text-purple focus:bg-gray-200 focus:outline-none focus:shadow-outline"
@@ -150,24 +150,143 @@
           background-size: cover;
         "
       >
-        <div class="container">
-          <div class="flex-wrap items-center">
-            <div class="w-full self-center px-4 text-center">
-              <h1
-                class="text-5xl mt-8 pt-14 lg:pt-16 xl:pt-28 text-white font-dsd text-center"
+        <!-- competition -->
+        <h1
+          class="text-5xl py-36 lg:py-40 xl:py-40 text-white font-dsd text-center"
+          id="merchandise"
+        >
+          MERCHANDISE
+        </h1>
+
+        <div class="flex">
+          <div class="w-2/12 flex items-center">
+            <div class="w-full text-right">
+              <button
+                onclick="prev()"
+                class="p-3 rounded-full bg-white border border-gray-100 shadow-lg mr-5"
               >
-                MERCHANDISE
-              </h1>
-              <div class="img pt-0 mt-10 text-center">
-                <img
-                  src="./public/img/Group Merch.svg"
-                  alt=""
-                  class="mx-auto pt-0 lg:pt-2 xl:pt-4 pb-14"
-                />
-              </div>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M19.5 12h-15m0 0l6.75 6.75M4.5 12l6.75-6.75"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div id="sliderContainer" class="w-10/12 overflow-hidden">
+            <ul id="slider" class="flex w-full transition-margin duration-700">
+              <li class="w-96 p-5">
+                <div class="p-5 h-full">
+                  <img
+                    class="h-50 w-full object-cover"
+                    src="public/img/merch.svg"
+                    alt=""
+                  />
+                  <h2
+                    class="mt-2 text-2xl font-bold text-center font-manrope text-white"
+                  >
+                    T-Shirt
+                  </h2>
+                  <p class="mt-2 text-white text-center">IDR 30.000</p>
+                </div>
+              </li>
+              <li class="w-96 p-5">
+                <div class="p-5 h-full">
+                  <img
+                    class="h-50 w-full object-cover"
+                    src="public/img/merch.svg"
+                    alt=""
+                  />
+                  <h2
+                    class="mt-2 text-2xl font-bold text-center font-manrope text-white"
+                  >
+                    T-Shirt
+                  </h2>
+                  <p class="mt-2 text-white text-center">IDR 30.000</p>
+                </div>
+              </li>
+              <li class="w-96 p-5">
+                <div class="p-5 h-full">
+                  <img
+                    class="h-50 w-full object-cover"
+                    src="public/img/merch.svg"
+                    alt=""
+                  />
+                  <h2
+                    class="mt-2 text-2xl font-bold text-center font-manrope text-white"
+                  >
+                    T-Shirt
+                  </h2>
+                  <p class="mt-2 text-white text-center">IDR 30.000</p>
+                </div>
+              </li>
+              <li class="w-96 p-5">
+                <div class="p-5 h-full">
+                  <img
+                    class="h-50 w-full object-cover"
+                    src="public/img/merch.svg"
+                    alt=""
+                  />
+                  <h2
+                    class="mt-2 text-2xl font-bold text-center font-manrope text-white"
+                  >
+                    T-Shirt
+                  </h2>
+                  <p class="mt-2 text-white text-center">IDR 30.000</p>
+                </div>
+              </li>
+              <li class="w-96 p-5">
+                <div class="p-5 h-full">
+                  <img
+                    class="h-50 w-full object-cover"
+                    src="public/img/merch.svg"
+                    alt=""
+                  />
+                  <h2
+                    class="mt-2 text-2xl font-bold text-center font-manrope text-white"
+                  >
+                    T-Shirt
+                  </h2>
+                  <p class="mt-2 text-white text-center">IDR 30.000</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="w-2/12 flex items-center">
+            <div class="w-full">
+              <button
+                onclick="next()"
+                class="p-3 rounded-full bg-white border border-gray-100 shadow-lg ml-5"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-6 h-6"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75"
+                  />
+                </svg>
+              </button>
             </div>
           </div>
         </div>
+
+        <!-- competition end -->
       </div>
     </section>
 
@@ -199,6 +318,6 @@
     </footer>
     <!-- footer end -->
     <!-- script -->
-    <script src="dist/js/script.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>
