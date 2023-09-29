@@ -1,7 +1,9 @@
-let firstVisibleIndex = 0;
+let currentIndex = 0;
 let sliderContainer = document.getElementById("sliderContainer");
 let slider = document.getElementById("slider");
 let cards = slider.getElementsByTagName("li");
+
+
 
 let elementsToShow = 3;
 if(document.body.clientWidth <1000){
@@ -17,6 +19,7 @@ let cardWidth = sliderContainerWidth / elementsToShow;
 slider.style.width = cards.length * cardWidth + "px";
 slider.style.transition='margin';
 slider.style.transitionDuration='1s';
+
 
 for (let index = 0; index < cards.length; index++) {
   const element = cards[index];
@@ -48,3 +51,4 @@ function next() {
     firstVisibleIndex++;
   }
 }
+
