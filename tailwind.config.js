@@ -8,12 +8,11 @@ module.exports = {
     },
     extend: {
       backgroundImage:{
-<<<<<<< HEAD
         'exhibition_bg':"url('/public/img/Coba Background.png')",
        
-=======
+
         'Home_bg':"url('/public/img/Home.png')",
->>>>>>> c864fd071f4a617fd27d76e6cc7ac94e3aafb2bd
+
       },
       colors: {
         purple: "#6C3077",
