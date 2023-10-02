@@ -35,7 +35,7 @@
   background-color: #40a74a;
   padding: 10px;
   text-decoration: none;
-  color: #26038a;
+  color: #000;
   margin-bottom: 10px;
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
   border: 2px solid rgba(255, 255, 255, 0.18);
@@ -66,8 +66,8 @@
   .nav-item .competition::after {
     content: "";
     display: block;
-    color: #0a042d;
-    border-bottom: 3px solid #0a042d;
+    color: #000;
+    border-bottom: 3px solid #000;
     margin-bottom: -3px;
   }
 }
