@@ -100,14 +100,13 @@ body {
 }
 
 .tranding-slide .tranding-slide-img img {
-  width: 37rem;
-  height: 42rem;
+  width: 35rem;
+  height: 35rem;
   border-radius: 2rem;
   object-fit: cover;
 }
 
 .tranding-slide .tranding-slide-content {
-  position: absolute;
   left: 0;
   top: 0;
   right: 0;
@@ -115,14 +114,14 @@ body {
 }
 
 .tranding-slide-content .price {
-  position: absolute;
+  text-align: center;
   top: 2rem;
   right: 2rem;
   color: var(--white);
 }
 
-.tranding-slide-content .tranding-slide-content-bottom {
-  position: absolute;
+.tranding-slide-content-bottom {
+  text-align: center;
   bottom: 2rem;
   left: 2rem;
   color: var(--white);
@@ -145,7 +144,6 @@ body {
 
 .tranding-slider-control {
   position: relative;
-  bottom: 2rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -206,7 +204,6 @@ body {
 .tranding-slider-control .swiper-pagination {
   position: relative;
   width: 15rem;
-  bottom: 1rem;
 }
 
 .tranding-slider-control .swiper-pagination .swiper-pagination-bullet {
