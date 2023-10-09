@@ -2,10 +2,10 @@
 module.exports = {
   content: ["index.html", "./node_modules/flowbite/**/*.js"],
   theme: {
-    container: {
-      center: true,
-      padding: "0px",
-    },
+    // container: {
+    //   center: true,
+    //   padding: "0px",
+    // },
     extend: {
       backgroundImage: {
         exhibition_bg: "url('/public/img/Coba Background.png')",
